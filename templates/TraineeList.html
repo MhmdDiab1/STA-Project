@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <h1>Trainees List <small> STA</small></h1>
+  <a class="btn btn-success" href="/add_Trainee"> Add a student</a>
+  <hr>
+  <table class="table table-striped">
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>email</th>
+      <th>Age</th>
+      <th>Registeredsince</th>
+      <th></th>
+      <th></th>
+    </tr>
+    {% for trainee in trainees %}
+      <tr>
+        <td>{{trainee.id}}</td>
+        <td>{{trainee.Name}}</td>
+        <td>{{trainee.email}}</td>
+        <td>{{trainee.age}}</td>
+        <td>{{trainee.Registeredsince}}</td>
+        <td><a class="btn btn-default pull-right">Edit</a></td>
+        <td>
+          <form>
+            <input type="hidden" name="_method" value="DELETE">
+            <input type="submit" value="Delete" class="btn btn-danger">
+          </form>
+        </td>
+      </tr>
+    {% endfor %}
+  </table>
+{% endblock %}

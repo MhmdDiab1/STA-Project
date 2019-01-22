@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+    <div class='container'>
+        <h1>Add a new Trainee</h1>
+
+            <table>
+                <tr>
+                    <th><label>ID:</label></th>
+                    <th><label>Name:</label></th>
+                    <th><label>email</label></th>
+                    <th><label>age</label></th>
+                    <th><label>Date of Registration</label></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td><input type="text" name="ID"></td>
+                    <td><input type="text" name="Name"></td>
+                    <td><input type="text" name="Email"></td>
+                    <td><input type="text" name="Age"></td>
+                    <td><input type="date" name="Dateofregistration"></td>
+                    <td><button type="submit" class="btn btn-primary btn-sm" >Submit</button></td>
+                </tr>
+            </table>
+
+            
+        </form>
+    </div>
+   
+{% endblock %}
